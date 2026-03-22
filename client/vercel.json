@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/(api|track)/(.*)",
+      "destination": "https://commission-tracking-server.onrender.com/$1/$2"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

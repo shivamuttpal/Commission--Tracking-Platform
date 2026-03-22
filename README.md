@@ -71,7 +71,29 @@ npm run dev
 
 Open `http://localhost:5173`
 
-## 🛠️ Tech Stack & Reasoning
+## 🚀 Deployment
+
+### Backend (Render)
+1. Create a new **Web Service** on Render.
+2. Connect your GitHub repository.
+3. Set **Root Directory** to `server`.
+4. **Environment Variables**:
+   - `PORT`: `5000` (Render detects this automatically, but good to set)
+   - `MONGODB_URI`: Your Atlas connection string
+   - `JWT_SECRET`: A long random string
+   - `CLIENT_URL`: Your Vercel frontend URL (e.g., `https://popcom.vercel.app`)
+5. **Build Command**: `npm install`
+6. **Start Command**: `npm start`
+
+### Frontend (Vercel)
+1. Create a new project on Vercel.
+2. Connect your GitHub repository.
+3. Set **Root Directory** to `client`.
+4. **Framework Preset**: Vite.
+5. **Environment Variables**:
+   - `VITE_API_URL`: Your Render service URL + `/api` (e.g., `https://popcom-api.onrender.com/api`)
+6. Deploy!
+
 
 | Layer     | Technology       | Why                                              |
 |-----------|-----------------|--------------------------------------------------|
